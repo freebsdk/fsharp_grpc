@@ -1,12 +1,13 @@
 ﻿// Learn more about F# at http://fsharp.org
 
 open System
-open HelloWorld
 open Grpc.Core
+open Protocol.ProtoBuf
+
 
 
 type HelloServiceImpl(client : HelloService.HelloServiceClient) =
-        member this.SayHello(greeting : string) =
+        member _.SayHello(greeting : string) =
             let request = new HelloReq(Greeting = greeting)
             client.SayHello(request)
 
