@@ -1,2 +1,2 @@
 # fsharp_grpc
-Grpc example for F# language
+Grpc example written in F# language by freebsdk
